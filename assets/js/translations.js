@@ -1,7 +1,7 @@
 
 window.PORTFOLIO_TRANSLATIONS = {
   en: {
-    pageTitle: 'Ngoc-Minh Tran | Data & Systems Engineer',
+    pageTitle: 'Ngoc-Minh Tran | Data Engineer',
     htmlLang: 'en',
     chartLabels: ['PC case B', 'PC case E', 'PC case A', 'PC case D', 'PC case C', 'PC case F'],
     chartDataset1: 'Units Sold',
@@ -16,7 +16,7 @@ window.PORTFOLIO_TRANSLATIONS = {
       'nav-fullstack': 'Fullstack',
       'nav-contact': 'Contact',
       'hero-location': 'Berlin, Germany',
-      'hero-title': 'Data Scientist <br><span class="text-gradient">Ngoc-Minh Tran.</span>',
+      'hero-title': 'Data Engineer <br><span class="text-gradient">Ngoc-Minh Tran.</span>',
       'hero-summary':
         'Computer scientist experienced in building <strong class="text-slate-200 font-medium">reproducible ML pipelines</strong> on large-scale datasets. I bridge the gap between analytical algorithms and practical implementation, turning complex models into reliable, automated systems ready for production environments.',
       'hero-badge-1': 'Python & Scikit-learn',
@@ -77,7 +77,7 @@ window.PORTFOLIO_TRANSLATIONS = {
   },
 
   de: {
-    pageTitle: 'Ngoc-Minh Tran | Data & Systems Engineer',
+    pageTitle: 'Ngoc-Minh Tran | Data Engineer',
     htmlLang: 'de',
     chartLabels: ['PC-Gehäuse B', 'PC-Gehäuse E', 'PC-Gehäuse A', 'PC-Gehäuse D', 'PC-Gehäuse C', 'PC-Gehäuse F'],
     chartDataset1: 'Verkaufte Stück',
@@ -92,7 +92,7 @@ window.PORTFOLIO_TRANSLATIONS = {
       'nav-fullstack': 'Fullstack',
       'nav-contact': 'Kontakt',
       'hero-location': 'Berlin, Deutschland',
-      'hero-title': 'Data Scientist <br><span class="text-gradient">Ngoc-Minh Tran.</span>',
+      'hero-title': 'Data Engineer <br><span class="text-gradient">Ngoc-Minh Tran.</span>',
       'hero-summary':
         'Analytischer und praxisorientierter Informatiker mit Erfahrung in der Entwicklung <strong class="text-slate-200 font-medium">reproduzierbarer ML-Pipelines</strong> auf großen Datensätzen. Ich verbinde analytisches Denken mit praktischer Umsetzung und überführe komplexe Modelle in verlässliche, automatisierte Systeme für produktionsnahe Umgebungen.',
       'hero-badge-1': 'Python & Scikit-learn',
