@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ngoc-Minh Tran | Data &amp; Systems Engineer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="antialiased selection:bg-teal-500/30 selection:text-teal-200">
+  <div class="md:hidden fixed top-24 right-4 z-50 flex gap-2" id="lang-switcher-mobile">
+    <button
+      aria-label="Switch language to EN"
+      class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold border shadow-lg bg-teal-500/15 text-teal-300 border-teal-500/40"
+      data-lang="en"
+      type="button"
+    >
+      EN
+    </button>
+    <button
+      aria-label="Switch language to DE"
+      class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold border shadow-lg bg-slate-900 text-slate-300 border-slate-700"
+      data-lang="de"
+      type="button"
+    >
+      DE
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a class="text-xl font-bold tracking-tighter text-white" href="#hero" id="brand-link">
+        Minh<span class="text-teal-400">.</span>
+      </a>
+
+      <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium text-slate-400">
+        <a class="hover:text-teal-400 transition-colors" href="#hero" id="nav-overview">Overview</a>
+        <a class="hover:text-teal-400 transition-colors" href="#ml-engineering" id="nav-ml">ML Pipelines</a>
+        <a class="hover:text-teal-400 transition-colors" href="#data-analytics" id="nav-data">Data Analytics</a>
+        <a class="hover:text-teal-400 transition-colors" href="#it-ops" id="nav-it">IT Operations</a>
+        <a class="hover:text-teal-400 transition-colors" href="#frontend-dev" id="nav-frontend">Frontend</a>
+        <a class="hover:text-teal-400 transition-colors" href="#fullstack" id="nav-fullstack">Fullstack</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-2 ml-4 mr-3" id="lang-switcher">
+        <button
+          aria-label="Switch language to EN"
+          class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold border transition-all bg-teal-500/15 text-teal-300 border-teal-500/40"
+          data-lang="en"
+          type="button"
+        >
+          EN
+        </button>
+        <button
+          aria-label="Switch language to DE"
+          class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold border transition-all bg-slate-900 text-slate-300 border-slate-700 hover:border-teal-500/40"
+          data-lang="de"
+          type="button"
+        >
+          DE
+        </button>
+      </div>
+
+      <a
+        class="hidden md:block px-5 py-2.5 rounded-full bg-slate-800 text-white text-sm font-medium hover:bg-slate-700 border border-slate-700 transition-all hover:border-teal-500/50"
+        href="#contact"
+        id="nav-contact"
+      >
+        Contact
+      </a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+<!-- ================= HERO & SOCIAL PROOF ================= -->
+<section class="min-h-[85vh] flex flex-col justify-center pb-20 pt-10 relative" id="hero">
+<!-- Background Glow -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-900/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+<div class="reveal">
+<div class="inline-block px-3 py-1 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-semibold tracking-widest uppercase mb-6" id="hero-location">
+                    Berlin, Germany
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6" id="hero-title">
+                    Data Scientist <br/>
+<span class="text-gradient">Ngoc-Minh Tran.</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed font-light mb-10" id="hero-summary">
+                    Computer scientist experienced in building <strong class="text-slate-200 font-medium">reproducible ML pipelines</strong> on large-scale datasets. I bridge the gap between analytical algorithms and practical implementation, turning complex models into reliable, automated systems ready for production environments.
+                </p>
+<div class="flex flex-wrap gap-4 text-sm font-medium">
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-1">Python &amp; Scikit-learn</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-2">Machine Learning</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-3">SQL</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-4">Power BI &amp; DAX</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-5">IT Infrastructure</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-6">HTML</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-7">Jira Scrum Board</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-8">Agile</span>
+<span class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300" id="hero-badge-9">Java</span>
+</div>
+</div>
+<!-- Amazon Testimonial (High Impact) -->
+<div class="mt-20 reveal reveal-delay-2 tech-card p-8 md:p-10 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-teal-400 to-sky-500"></div>
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start justify-between">
+<div class="flex-1">
+<div class="text-slate-500 font-serif text-6xl leading-none absolute -top-2 left-6 opacity-20">"</div>
+<p class="text-lg md:text-xl text-slate-300 leading-relaxed italic relative z-10 mb-6 font-light" id="quote-text">
+                            "What distinguishes Minh is her ability to <strong class="text-white font-medium">connect analytical thinking with practical implementation</strong>. Among early-career data scientists I have mentored, she stands out for her discipline in building <strong class="text-teal-400 font-medium">reliable workflows</strong> rather than quick prototypes. I recommend Minh without reservation."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-white font-bold tracking-wider">
+                                DTL
+                            </div>
+<div>
+<h4 class="text-white font-semibold" id="quote-name">Dr. Dieu Thu Le</h4>
+<p class="text-slate-500 text-sm" id="quote-role">Senior Applied Scientist, Amazon</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ML ENGINEERING (THESIS) ================= -->
+<section class="py-24 border-t border-slate-800/50" id="ml-engineering">
+<div class="reveal mb-16 text-center max-w-3xl mx-auto">
+<h2 class="text-sm font-bold text-teal-400 tracking-widest uppercase mb-3" id="ml-section-kicker">01. Machine Learning &amp; Systems</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="ml-section-title">Educational Video Popularity Prediction</h3>
+<p class="text-slate-400 max-w-2xl text-lg" id="ml-section-desc">Built an end-to-end data processing pipeline from scratch, operated on high-performance computing infrastructure. Bachelor Thesis graded 1.7/4.0 (Excellent).</p>
+</div>
+<!-- Context & Ownership Row -->
+<div class="grid md:grid-cols-2 gap-12 mb-16">
+<div class="space-y-12">
+<div class="reveal reveal-delay-1 modern-timeline">
+<div class="modern-dot"></div>
+<h4 class="text-xl font-semibold text-white mb-3" id="ml-context-title">Context &amp; Challenge</h4>
+<p class="text-slate-400 leading-relaxed" id="ml-context-text">
+                            A PhD research effort required analyzing massive multimodal data (video, audio, text) to determine factors driving views. The core challenge wasn't just building the model, but creating a reproducible system that other researchers could easily rerun and build upon.
+                        </p>
+</div>
+<div class="reveal reveal-delay-2 modern-timeline">
+<div class="modern-dot" style="background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></div>
+<h4 class="text-xl font-semibold text-white mb-3" id="ml-impl-title">Implementation</h4>
+<ul class="space-y-4 text-slate-400">
+<li class="flex items-start">
+<span class="text-sky-400 mr-3 text-lg leading-none">→</span>
+<span id="ml-impl-bullet-1"><strong>Feature Extraction:</strong> Programmed in Python to process visual dynamics (Optical Flow), analyze speaking rate/audio pauses, and extract keywords from transcripts.</span>
+</li>
+<li class="flex items-start">
+<span class="text-sky-400 mr-3 text-lg leading-none">→</span>
+<span id="ml-impl-bullet-2"><strong>Training &amp; Classification:</strong> Utilized tree-based algorithms like <strong>Random Forest</strong> and <strong>Decision Tree</strong> for popularity classification. Scaled the entire training pipeline on an HPC/Slurm environment to optimize large-scale computation time.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="reveal reveal-delay-3 h-full flex flex-col justify-center">
+<div class="tech-card p-8">
+<div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-6">
+<h4 class="text-lg font-semibold text-white" id="ml-ownership-title">Engineering Ownership</h4>
+<span class="flex items-center text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded border border-emerald-400/20" id="ml-ownership-badge">
+<span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
+                                Prod-Ready
+                            </span>
+</div>
+<div class="space-y-4">
+<!-- Item 1: Reproducibility -->
+<div class="bg-slate-800/40 rounded-lg p-4 border border-slate-700/50 hover:border-teal-500/40 transition-colors">
+<div class="flex items-center mb-2">
+<span class="text-teal-400 mr-3 text-lg">🖧</span>
+<span class="text-sm font-semibold text-slate-200" id="ml-repro-title">100% Reproducible Pipeline</span>
+</div>
+<p class="text-xs text-slate-400 pl-8 leading-relaxed" id="ml-repro-text">
+                                    Transitioned from fragmented Jupyter Notebooks to a modular, version-controlled Python codebase for automated execution.
+                                </p>
+</div>
+<!-- Item 2: HPC -->
+<div class="bg-slate-800/40 rounded-lg p-4 border border-slate-700/50 hover:border-sky-500/40 transition-colors">
+<div class="flex items-center mb-2">
+<span class="text-sky-400 mr-3 text-lg">⚙️</span>
+<span class="text-sm font-semibold text-slate-200" id="ml-hpc-title">HPC / Slurm Integration</span>
+</div>
+<p class="text-xs text-slate-400 pl-8 leading-relaxed" id="ml-hpc-text">
+                                    Engineered scalable batch scripts to distribute large model training tasks seamlessly across high-performance cluster nodes.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Workflow Diagram (CSS/HTML Only) -->
+<div class="reveal tech-card p-6 md:p-10 relative overflow-hidden">
+<div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#2dd4bf 1px, transparent 1px); background-size: 20px 20px;"></div>
+<h4 class="text-xl font-bold text-white mb-8 text-center relative z-10" id="ml-workflow-title">Prediction Workflow Architecture</h4>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 relative z-10 items-stretch">
+<!-- 1. Extraction Task -->
+<div class="flex flex-col space-y-3">
+<div class="text-xs font-bold text-slate-500 uppercase tracking-widest text-center mb-2" id="ml-flow-col1">1. Input &amp; Extraction</div>
+<div class="p-3 bg-slate-800/80 border border-slate-700 rounded-lg text-sm text-slate-300 flex items-center justify-between">
+<span id="ml-flow-input-1"><span class="text-lg mr-2" id="ml-flow-input-2">⬇️</span> Video (Optical Flow)</span>
+</div>
+<div class="p-3 bg-slate-800/80 border border-slate-700 rounded-lg text-sm text-slate-300 flex items-center justify-between">
+<span id="ml-flow-input-3"><span class="text-lg mr-2" id="ml-flow-input-4">🔊</span> Audio (Rate &amp; Pauses)</span>
+</div>
+<div class="p-3 bg-slate-800/80 border border-slate-700 rounded-lg text-sm text-slate-300 flex items-center justify-between">
+<span id="ml-flow-input-5"><span class="text-lg mr-2" id="ml-flow-input-6">📝</span> Text (Transcription)</span>
+</div>
+</div>
+<!-- 2. Feature Engineering -->
+<div class="flex flex-col space-y-3 relative">
+<div class="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 text-slate-600">➜</div>
+<div class="text-xs font-bold text-slate-500 uppercase tracking-widest text-center mb-2" id="ml-flow-col2">2. Features</div>
+<div class="p-3 bg-indigo-900/20 border border-indigo-500/30 rounded-lg text-sm text-indigo-300" id="ml-flow-feature-1">
+                            • Motion Intensity Score<br/>
+                            • Motion Variability Index
+                        </div>
+<div class="p-3 bg-indigo-900/20 border border-indigo-500/30 rounded-lg text-sm text-indigo-300" id="ml-flow-feature-2">
+                            • Speaking Rate<br/>
+                            • Pause Freq. &amp; Duration
+                        </div>
+<div class="p-3 bg-indigo-900/20 border border-indigo-500/30 rounded-lg text-sm text-indigo-300" id="ml-flow-feature-3">
+                            • Keyword Density<br/>
+                            • Top Keyword Ratio
+                        </div>
+</div>
+    <!-- 3. Classification Task (RF & DT) -->
+<div class="flex flex-col justify-center space-y-4 relative">
+<div class="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 text-slate-600">➜</div>
+<div class="text-xs font-bold text-teal-500 uppercase tracking-widest text-center mb-2" id="ml-flow-col3">3. Classification Task</div>
+<div class="p-5 bg-teal-900/20 border border-teal-500/50 rounded-xl text-center shadow-[0_0_15px_rgba(45,212,191,0.1)]">
+<div class="flex justify-center gap-2 mb-4">
+<span class="px-3 py-1 bg-teal-800/50 text-teal-300 text-xs font-bold rounded-full border border-teal-600/50" id="ml-model-1">Random Forest</span>
+<span class="px-3 py-1 bg-teal-800/50 text-teal-300 text-xs font-bold rounded-full border border-teal-600/50" id="ml-model-2">Decision Tree</span>
+</div>
+<ul class="text-sm text-slate-300 text-left space-y-2">
+<li class="flex items-center" id="ml-classify-item-1"><span class="text-teal-500 mr-2">✓</span> Model Training</li>
+<li class="flex items-center" id="ml-classify-item-2"><span class="text-teal-500 mr-2">✓</span> Model Evaluation</li>
+<li class="flex items-center" id="ml-classify-item-3"><span class="text-teal-500 mr-2">✓</span> Feature Contribution</li>
+</ul>
+</div>
+</div>
+<!-- 4. Output -->
+<div class="flex flex-col justify-center space-y-3 relative">
+<div class="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 text-slate-600">➜</div>
+<div class="text-xs font-bold text-slate-500 uppercase tracking-widest text-center mb-2" id="ml-flow-col4">4. Output</div>
+<div class="p-3 bg-emerald-900/20 border border-emerald-500/50 rounded-lg text-sm font-semibold text-emerald-400 text-center shadow-sm" id="ml-output-1">
+                            High Popularity
+                        </div>
+<div class="p-3 bg-yellow-900/20 border border-yellow-500/50 rounded-lg text-sm font-semibold text-yellow-400 text-center shadow-sm" id="ml-output-2">
+                            Medium Popularity
+                        </div>
+<div class="p-3 bg-rose-900/20 border border-rose-500/50 rounded-lg text-sm font-semibold text-rose-400 text-center shadow-sm" id="ml-output-3">
+                            Low Popularity
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= DATA ANALYTICS (CSL) ================= -->
+<section class="py-24 border-t border-slate-800/50" id="data-analytics">
+<div class="reveal mb-16 text-center max-w-3xl mx-auto">
+<h2 class="text-sm font-bold text-sky-400 tracking-widest uppercase mb-3" id="data-section-kicker">02. Data Analytics &amp; Business Intelligence</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="data-section-title">Optimizing Operations &amp; Production Data</h3>
+<p class="text-slate-400 max-w-2xl text-lg" id="data-section-desc">CSL Computer GmbH. Transformed messy raw data from the supply chain into business intelligence to support management decisions.</p>
+</div>
+<div class="grid lg:grid-cols-5 gap-8 items-center">
+<div class="lg:col-span-2 space-y-6 reveal">
+<p class="text-slate-400 leading-relaxed" id="data-context-text">
+                        The hardware manufacturing environment requires agile responses to input components and output yields. Real-world data is frequently unstructured and fragmented.
+                    </p>
+<ul class="space-y-4">
+<li class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+<strong class="text-white block mb-1" id="data-item1-title">ETL Pipeline with DAX &amp; Power Query</strong>
+<span class="text-sm text-slate-400" id="data-item1-text">Cleaned and transformed massive raw purchasing/sales data into reliable Data Models.</span>
+</li>
+<li class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+<strong class="text-white block mb-1" id="data-item2-title">Designing KPI Dashboards</strong>
+<span class="text-sm text-slate-400" id="data-item2-text">Visualized operational performance and automated periodic reporting for the executive team.</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-3 reveal reveal-delay-2">
+<div class="tech-card p-6">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h4 class="text-white font-medium" id="data-chart-title">Top Products by Revenue in the First Quarter of 2024</h4>
+<p class="text-xs text-slate-500" id="data-chart-subtitle">Simulated Data Visualization based on Power BI logic</p>
+</div>
+<div class="px-2 py-1 rounded bg-teal-500/10 text-teal-400 text-xs font-mono border border-teal-500/20" id="data-chart-badge">Live Sync</div>
+</div>
+<div class="chart-container">
+<canvas id="kpiChart"></canvas>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= IT OPS (MWC) ================= -->
+<section class="py-24 border-t border-slate-800/50" id="it-ops">
+<div class="reveal mb-16 text-center max-w-3xl mx-auto">
+<h2 class="text-sm font-bold text-emerald-400 tracking-widest uppercase mb-3" id="it-section-kicker">03. IT Operations</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="it-section-title">Infrastructure Support at MWC Barcelona 2025</h3>
+<p class="text-slate-400 text-lg" id="it-section-desc">ADT Global. Managed live systems under high pressure, ensuring "Zero Downtime" at the world's largest connectivity event.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="tech-card p-8 reveal reveal-delay-1">
+<div class="text-4xl mb-6 text-slate-600 font-light">01.</div>
+<h4 class="text-xl font-bold text-white mb-3" id="it-card1-title">Cross-functional Sync</h4>
+<p class="text-slate-400 text-sm leading-relaxed" id="it-card1-text">
+                        Coordinated with marketing and engineering to align demo flows, UI content, and operational requirements, ensuring consistent presentation during customer interactions.
+                    </p>
+</div>
+<div class="tech-card p-8 reveal reveal-delay-2">
+<div class="text-4xl mb-6 text-slate-600 font-light">02.</div>
+<h4 class="text-xl font-bold text-white mb-3" id="it-card2-title">Infrastructure Setup</h4>
+<p class="text-slate-400 text-sm leading-relaxed" id="it-card2-text">
+                        Configured physical devices, synchronized software updates, and optimized internal Wi-Fi networks. Deployed contingency plans to react instantly to any hardware issues.
+                    </p>
+</div>
+<div class="tech-card p-8 reveal reveal-delay-3 bg-gradient-to-br from-slate-900 to-teal-900/20 border-teal-500/20">
+<div class="text-4xl mb-6 text-teal-500/50 font-light">03.</div>
+<h4 class="text-xl font-bold text-white mb-3" id="it-card3-title">Real-World Impact</h4>
+<p class="text-slate-300 text-sm leading-relaxed" id="it-card3-text">
+                        Completed the 4-day event seamlessly. The perfectly functioning system directly attracted infrastructure experts from <span class="text-teal-400 font-semibold">Qualcomm, Nokia, Ericsson, and NVIDIA</span> to the booth for analysis.
+                    </p>
+</div>
+</div>
+</section>
+<!-- ================= FRONTEND DEV (CV APP) ================= -->
+<section class="py-24 border-t border-slate-800/50" id="frontend-dev">
+<div class="reveal mb-16 text-center max-w-3xl mx-auto">
+<h2 class="text-sm font-bold text-indigo-400 tracking-widest uppercase mb-3" id="cv-section-kicker">04. Frontend Engineering</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="cv-section-title">CV Template Web Application</h3>
+<p class="text-slate-400 max-w-2xl text-lg" id="cv-section-desc">Data Assessment Solutions GmbH. Standardized internal workflows through responsive UI components and Agile development.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 mb-16">
+<div class="space-y-12">
+<div class="reveal reveal-delay-1 modern-timeline">
+<div class="modern-dot"></div>
+<h4 class="text-xl font-semibold text-white mb-3" id="cv-context-title">Context &amp; Task</h4>
+<p class="text-slate-400 leading-relaxed" id="cv-context-text">
+                            The company needed a standardized way to generate professional CVs internally to improve speed and format consistency. As a Frontend Developer, my task was to build a responsive, user-friendly web application to accelerate this creation process.
+                        </p>
+</div>
+<div class="reveal reveal-delay-2 modern-timeline">
+<div class="modern-dot" style="background: #818cf8; box-shadow: 0 0 10px #818cf8;"></div>
+<h4 class="text-xl font-semibold text-white mb-3" id="cv-impl-title">Implementation</h4>
+<ul class="space-y-4 text-slate-400">
+<li class="flex items-start">
+<span class="text-indigo-400 mr-3 text-lg leading-none">→</span>
+<span id="cv-impl-bullet-1"><strong>UI Component Architecture:</strong> Owned key frontend implementations using <strong>ASP.NET Core, jQuery, and MDB</strong>. Built reusable flows including dynamic forms, dropdowns, chips, and toast notifications.</span>
+</li>
+<li class="flex items-start">
+<span class="text-indigo-400 mr-3 text-lg leading-none">→</span>
+<span id="cv-impl-bullet-2"><strong>Agile Delivery:</strong> Worked in a strict Agile setup, tracking tasks on Jira (Scrum/Kanban boards), and collaborating closely with the team through iterative deliveries and reviews.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="reveal reveal-delay-3 h-full flex flex-col justify-center">
+<div class="tech-card p-8 relative overflow-hidden group flex flex-col items-center justify-center min-h-[400px]">
+<!-- Background decoration -->
+<div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent"></div>
+<div class="flex items-center justify-between w-full border-b border-slate-700 pb-4 mb-8 relative z-10">
+<h4 class="text-lg font-semibold text-white" id="cv-render-title">CV Template UI Rendering</h4>
+<span class="flex items-center text-xs font-mono text-indigo-400 bg-indigo-400/10 px-2 py-1 rounded border border-indigo-400/20" id="cv-render-badge">
+                                Live Preview
+                            </span>
+</div>
+<!-- CV Wireframe -->
+<div class="w-full max-w-[220px] aspect-[1/1.4] bg-slate-800 border border-slate-600 shadow-[0_0_30px_rgba(0,0,0,0.5)] rounded-sm p-4 flex flex-col gap-3 relative z-10 transform transition-transform duration-500 group-hover:scale-105 group-hover:border-indigo-500/50">
+<!-- Header Area -->
+<div class="flex items-center gap-3 border-b border-slate-700 pb-3">
+<div class="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-500/40 shrink-0"></div>
+<div class="flex flex-col gap-1.5 w-full">
+<div class="h-2 w-3/4 bg-slate-300 rounded-full"></div>
+<div class="h-1.5 w-1/2 bg-indigo-400/80 rounded-full"></div>
+</div>
+</div>
+<!-- Body Area -->
+<div class="flex gap-3 flex-1 mt-1">
+<!-- Left Column -->
+<div class="w-1/3 flex flex-col gap-2 border-r border-slate-700 pr-2">
+<div class="h-1.5 w-full bg-slate-500 rounded-full mb-1"></div>
+<div class="h-1 w-5/6 bg-slate-600 rounded-full"></div>
+<div class="h-1 w-full bg-slate-600 rounded-full"></div>
+<div class="h-1 w-4/6 bg-slate-600 rounded-full"></div>
+<div class="h-1.5 w-full bg-slate-500 rounded-full mt-2 mb-1"></div>
+<div class="h-1 w-full bg-slate-600 rounded-full"></div>
+<div class="h-1 w-5/6 bg-slate-600 rounded-full"></div>
+</div>
+<!-- Right Column -->
+<div class="flex-1 flex flex-col gap-3">
+<!-- Block 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="h-1.5 w-2/3 bg-slate-400 rounded-full mb-1"></div>
+<div class="h-1 w-full bg-slate-600 rounded-full"></div>
+<div class="h-1 w-11/12 bg-slate-600 rounded-full"></div>
+<div class="h-1 w-4/5 bg-slate-600 rounded-full"></div>
+</div>
+<!-- Block 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="h-1.5 w-3/4 bg-slate-400 rounded-full mb-1"></div>
+<div class="h-1 w-full bg-slate-600 rounded-full"></div>
+<div class="h-1 w-full bg-slate-600 rounded-full"></div>
+<div class="h-1 w-2/3 bg-slate-600 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Floating UI Elements to simulate "Web App" -->
+<div class="absolute -right-6 top-16 bg-slate-900 border border-slate-600 px-2 py-1 rounded text-[9px] text-slate-300 shadow-xl flex items-center gap-1 z-20" id="cv-float-edit">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Edit Block
+                            </div>
+<div class="absolute -left-5 bottom-12 bg-slate-900 border border-slate-600 px-2 py-1 rounded text-[9px] text-slate-300 shadow-xl flex items-center gap-1 z-20" id="cv-float-save">
+<span class="text-teal-400 font-bold">✓</span> Auto-Save
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 border-t border-slate-800/50 min-h-[70vh] flex flex-col justify-center" id="academic-mensa">
+<div class="reveal mb-12 text-center max-w-3xl mx-auto">
+<h2 class="text-sm font-bold text-fuchsia-400 tracking-widest uppercase mb-3" id="mensa-section-kicker">05. Frontend Engineering</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="mensa-section-title">Mensa Info Points System</h3>
+<p class="text-slate-400 max-w-2xl text-lg" id="mensa-section-desc">Frontend Development &amp; Database Integration</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="reveal reveal-delay-1 space-y-6">
+<p class="text-slate-400 leading-relaxed text-lg" id="mensa-context-text">
+                        Designed and built a kiosk-style information system to improve on-site access to university menus. The core objective was to ensure smooth interaction on touchscreens for a high volume of students.
+                    </p>
+<ul class="space-y-4">
+<li class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+<strong class="text-white block mb-1" id="mensa-item1-title">Touch-Optimized Frontend</strong>
+<span class="text-sm text-slate-400" id="mensa-item1-text">Developed the user interface from scratch using <strong>HTML &amp; JavaScript</strong>, focusing on fast response times and intuitive navigation.</span>
+</li>
+<li class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+<strong class="text-white block mb-1" id="mensa-item2-title">Database Integration</strong>
+<span class="text-sm text-slate-400" id="mensa-item2-text">Integrated <strong>CouchDB</strong> for content storage and rapid retrieval, ensuring reliable data syncing for daily menus.</span>
+</li>
+</ul>
+</div>
+<div class="reveal reveal-delay-2 flex justify-center">
+<div class="tech-card p-6 flex items-center justify-center min-h-[400px] relative overflow-hidden group w-full max-w-md">
+<div class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-transparent"></div>
+<!-- Kiosk Vertical Mockup -->
+<div class="w-full max-w-[220px] aspect-[9/16] bg-slate-900 border-2 border-slate-700 shadow-[0_0_30px_rgba(217,70,239,0.15)] rounded-2xl flex flex-col relative z-10 transform transition-transform duration-500 group-hover:scale-105 group-hover:border-fuchsia-500/50 overflow-hidden">
+<!-- Top Status Bar (Language & Login) -->
+<div class="flex justify-between items-center px-3 py-2 bg-slate-950 border-b border-slate-800">
+<div class="flex gap-1.5 text-[9px] font-mono text-slate-500 cursor-pointer">
+<span class="hover:text-slate-300">VN</span>
+<span class="text-fuchsia-400 font-bold border-b border-fuchsia-400">EN</span>
+<span class="hover:text-slate-300">DE</span>
+</div>
+<div class="w-5 h-5 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[10px] text-slate-300 cursor-pointer hover:bg-slate-700">
+                                    👤
+                                </div>
+</div>
+<!-- Header -->
+<div class="px-4 py-3 pb-0">
+<h5 class="text-white font-bold text-sm tracking-wide">Mensa Hub</h5>
+<p class="text-[10px] text-slate-400" id="mensa-mock-subtitle">What are you craving today?</p>
+</div>
+<!-- Categories (Breakfast, Lunch, Dinner) -->
+<div class="flex px-3 mt-4 gap-1.5 justify-between">
+<div class="flex-1 py-1 text-center bg-slate-800 text-slate-400 text-[10px] rounded-full cursor-pointer hover:bg-slate-700" id="mensa-mock-breakfast">Breakfast</div>
+<div class="flex-1 py-1 text-center bg-fuchsia-500/20 text-fuchsia-400 border border-fuchsia-500/30 text-[10px] rounded-full font-bold cursor-pointer shadow-[0_0_10px_rgba(217,70,239,0.2)]" id="mensa-mock-lunch">Lunch</div>
+<div class="flex-1 py-1 text-center bg-slate-800 text-slate-400 text-[10px] rounded-full cursor-pointer hover:bg-slate-700" id="mensa-mock-dinner">Dinner</div>
+</div>
+<!-- Food List -->
+<div class="flex-1 overflow-hidden px-3 mt-4 flex flex-col gap-2.5">
+<!-- Item 1 -->
+<div class="bg-slate-800/40 rounded-lg p-2 flex gap-2 border border-slate-700/50 hover:border-slate-500/50 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-md bg-slate-700 shrink-0 flex items-center justify-center text-lg">🍲</div>
+<div class="flex flex-col justify-center gap-1.5 w-full">
+<div class="h-1.5 w-3/4 bg-slate-300 rounded-full"></div>
+<div class="h-1 w-1/2 bg-slate-500 rounded-full"></div>
+<div class="flex justify-between items-center mt-1">
+<div class="h-1.5 w-8 bg-fuchsia-400/80 rounded-full"></div>
+<div class="w-3 h-3 rounded-full bg-slate-600 flex items-center justify-center text-[8px] text-white">+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-slate-800/40 rounded-lg p-2 flex gap-2 border border-slate-700/50 hover:border-slate-500/50 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-md bg-slate-700 shrink-0 flex items-center justify-center text-lg">🍛</div>
+<div class="flex flex-col justify-center gap-1.5 w-full">
+<div class="h-1.5 w-full bg-slate-300 rounded-full"></div>
+<div class="h-1 w-2/3 bg-slate-500 rounded-full"></div>
+<div class="flex justify-between items-center mt-1">
+<div class="h-1.5 w-8 bg-fuchsia-400/80 rounded-full"></div>
+<div class="w-3 h-3 rounded-full bg-slate-600 flex items-center justify-center text-[8px] text-white">+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-slate-800/40 rounded-lg p-2 flex gap-2 border border-slate-700/50 hover:border-slate-500/50 transition-colors cursor-pointer relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+<div class="w-10 h-10 rounded-md bg-slate-700 shrink-0 flex items-center justify-center text-lg">🥗</div>
+<div class="flex flex-col justify-center gap-1.5 w-full">
+<div class="h-1.5 w-2/3 bg-slate-300 rounded-full"></div>
+<div class="h-1.5 w-8 bg-fuchsia-400/80 rounded-full mt-1"></div>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="p-3 mt-auto relative z-20 bg-slate-900 border-t border-slate-800 pt-2" id="mensa-mock-checkout-wrap">
+<div class="w-full py-2 bg-fuchsia-500 hover:bg-fuchsia-400 cursor-pointer rounded-lg text-center text-[11px] font-bold text-white shadow-[0_4px_15px_rgba(217,70,239,0.3)] transition-colors" id="mensa-mock-checkout">
+                                    Checkout (0)
+                                </div>
+</div>
+<!-- Floating badge -->
+<div class="absolute -right-3 top-16 bg-slate-800 border border-fuchsia-500/30 px-2 py-1 rounded text-[8px] text-fuchsia-300 shadow-xl flex items-center gap-1 z-20 font-mono hidden md:flex">
+                                Vegan?
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ACADEMIC PROJECT (BATTLESHIP) ================= -->
+<section class="py-24 border-t border-slate-800/50 min-h-[70vh] flex flex-col justify-center" id="fullstack">
+<div class="reveal mb-12 text-center max-w-3xl mx-auto">
+<h2 class="text-sm font-bold text-violet-400 tracking-widest uppercase mb-3" id="fs-section-kicker">06. Full-Stack Engineering</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="fs-section-title">Java Game "Battleship"</h3>
+<p class="text-slate-400 max-w-2xl text-lg" id="fs-section-desc">Java, WebSockets &amp; Real-time Architecture</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Visual Element on the left for varied layout -->
+<div class="reveal reveal-delay-1 order-2 lg:order-1">
+<div class="tech-card p-8 flex items-center justify-center min-h-[350px] relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-tr from-violet-500/10 to-transparent"></div>
+<div class="w-full max-w-sm relative z-10">
+<!-- Network Flow Mockup -->
+<div class="flex justify-between items-center mb-6">
+<div class="px-3 py-1 bg-violet-500/20 text-violet-300 text-xs rounded border border-violet-500/30 font-mono" id="fs-player-1">Player 1 (JavaFX)</div>
+<div class="text-slate-400 text-xs animate-pulse font-mono flex flex-col items-center" id="fs-ws">
+<span>WebSockets</span>
+<span>⇄</span>
+</div>
+<div class="px-3 py-1 bg-violet-500/20 text-violet-300 text-xs rounded border border-violet-500/30 font-mono" id="fs-player-2">Player 2 (JavaFX)</div>
+</div>
+<!-- Mock Game Grid -->
+<div class="grid grid-cols-4 gap-1.5 p-3 bg-slate-900 rounded-xl border border-slate-700 shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+<div class="aspect-square bg-slate-800 rounded-md"></div>
+<div class="aspect-square bg-rose-500/20 border border-rose-500/50 rounded-md flex items-center justify-center text-sm">💥</div>
+<div class="aspect-square bg-slate-800 rounded-md"></div>
+<div class="aspect-square bg-slate-800 rounded-md"></div>
+<div class="aspect-square bg-slate-800 rounded-md"></div>
+<div class="aspect-square bg-slate-800 rounded-md"></div>
+<div class="aspect-square bg-teal-500/20 border border-teal-500/50 rounded-md flex items-center justify-center text-sm">🌊</div>
+<div class="aspect-square bg-slate-800 rounded-md"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="reveal reveal-delay-2 space-y-6 order-1 lg:order-2">
+<p class="text-slate-400 leading-relaxed text-lg" id="fs-context-text">
+                        Developed a real-time, two-player networked game focusing on object-oriented design, synchronized game states, and event-driven user interfaces.
+                    </p>
+<ul class="space-y-4">
+<li class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+<strong class="text-white block mb-1" id="fs-item1-title">GUI &amp; Core Game Logic</strong>
+<span class="text-sm text-slate-400" id="fs-item1-text">Built the interactive game board using <strong>JavaFX</strong>. Implemented core logic including ship placement, hit/miss validation, and win conditions.</span>
+</li>
+<li class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+<strong class="text-white block mb-1" id="fs-item2-title">Real-time Networking</strong>
+<span class="text-sm text-slate-400" id="fs-item2-text">Managed client-server communication using <strong>WebSockets</strong> to ensure instant turn updates and synchronized game states across players, utilizing Git for version control.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ================= CONTACT ================= -->
+<section class="py-24 border-t border-slate-800/50 text-center" id="contact">
+<div class="reveal max-w-2xl mx-auto">
+<h2 class="text-4xl font-bold text-white mb-6" id="contact-title">Ready to Collaborate.</h2>
+<p class="text-slate-400 text-lg mb-10" id="contact-text">
+                    I am always looking for opportunities to join projects in Machine Learning, Data Pipeline design, or production-grade data systems.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-8 py-4 rounded-xl bg-teal-500 text-slate-950 font-bold hover:bg-teal-400 transition-all hover:shadow-[0_0_20px_rgba(45,212,191,0.4)]" href="mailto:minhtran.1298@gmail.com" id="contact-email">
+                        minhtran.1298@gmail.com
+                    </a>
+<a class="px-8 py-4 rounded-xl bg-slate-800 text-white font-medium hover:bg-slate-700 border border-slate-700 transition-all hover:border-teal-500/50" href="https://www.linkedin.com/in/ngoc-minh-tran-39121522b/" id="contact-linkedin" rel="noopener noreferrer" target="_blank">
+                        LinkedIn Profile
+                    </a>
+</div>
+</div>
+</section>  
+</main>
+
+  <footer class="border-t border-slate-800/50 py-8 text-center text-slate-500 text-sm">
+    <p id="footer-text">© 2026 Ngoc-Minh Tran. Engineered &amp; Designed in Berlin.</p>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
